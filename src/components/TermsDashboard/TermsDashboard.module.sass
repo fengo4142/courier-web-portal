@@ -1,0 +1,55 @@
+@import "../../styles/variables"
+
+.termsWrapper
+  width: 100%
+  color: $secondGreyFont
+  padding: 40px 200px 0
+  overflow: auto
+
+  @include md
+    padding: 22px 26px
+
+  ol > li
+    counter-increment: item
+  .nested
+    ol
+      counter-reset: item
+
+    ol > li
+      counter-increment: item
+      display: block
+
+    ol > li:before
+      content: counters(item, ".") ". "
+      margin-left: -30px
+      margin-bottom: -21px
+      display: block
+
+  .title
+    font-size: 32px
+    text-align: center
+    color: $black
+    font-weight: 500
+
+    @include sm
+      display: none
+
+  .article
+    padding: 28px 0 40px
+
+    @include sm
+      padding: 15px 0 20px
+
+    .subtitle
+      color: $subtitleFont
+      font-size: 24px
+      padding-bottom: 6px
+
+      @include sm
+        font-size: $subTitle
+
+    .text
+      font-size: 15px
+
+      @include sm
+        font-size: 14px

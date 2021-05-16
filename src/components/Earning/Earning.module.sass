@@ -1,0 +1,219 @@
+@import "../../styles/variables"
+
+.earningWrapper
+  width: 100%
+  background: $greyBg
+  padding: 30px 30px 40px 30px
+
+  .pendingBlock
+    margin-top: 0
+    padding: 20px
+
+  @include sm
+    padding: 16px
+
+  .header
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 35px
+    @include flex
+
+    @include sm
+      padding-bottom: 10px
+
+    .title
+      font-size: 32px
+
+      @include sm
+        font-size: $subTitle
+
+    .select
+      max-width: 120px
+
+    .input
+      color: $blue
+      border: none
+      padding-left: 20px
+
+    .link
+      @include link($blue)
+
+    .downArrow
+      padding-left: 5px
+
+  .pendingHeader
+    width: 100%
+    padding: 30px
+    margin-bottom: 20px
+    border-radius: 10px
+    box-shadow: 0 0 1px 0 $border
+    background-color: $white
+    @include flex
+    align-items: flex-start
+
+    @include sm
+      padding: 23px 20px
+
+    .textBlock
+      justify-content: space-around
+      padding-left: 12px
+      @include flex
+      @include flex-flow-column
+
+      .titlePending
+        font-size: 25px
+        padding-bottom: 3px
+
+        @include sm
+          font-size: $subTitle
+
+      .subtitlePending
+        font-size: $secondaryFont
+
+        @include sm
+          font-size: 14px
+
+      .email
+        color: $mainRed
+
+  .metrics
+    background: $white
+    margin-bottom: 20px
+    padding: 45px 60px
+    border-radius: 10px
+
+    @include sm
+      padding: 19px 26px
+      margin-bottom: 16px
+
+    .moneyWrapper
+      justify-content: space-between
+      @include flex
+      @include flex-flow-row
+
+      .moneyBlock
+        width: calc(33% + 40px)
+        &:first-child
+          width: calc(33% - 20px)
+        &:last-child
+          width: calc(33% - 20px)
+        &:not(:first-child)
+          border-left: 1px solid $border
+          padding-left: 60px
+        @include sm
+          &:not(:first-child)
+            border-left: none
+            padding-left: 0
+
+        @include sm
+          &:first-child
+            border-top: 1px solid $border
+            border-bottom: 1px solid $border
+          &:last-child
+            border-left: 1px solid $border
+        &.fullCol
+          @include sm
+            width: 100%
+            padding: 17px 0
+        &.halfCol
+          @include sm
+            width: 50%
+            margin: 17px 0 0 0
+
+        .title
+          color: $greyFont
+          font-size: $subTitle
+          &.left
+            @include sm
+              text-align: left
+          &.right
+            @include sm
+              text-align: right
+          @include sm
+            text-align: center
+            font-size: 14px
+
+        .money
+          font-size: 57px
+          color: $secondGreyFont
+          font-weight: 300
+          &.left
+            @include sm
+              text-align: left
+          &.right
+            @include sm
+              text-align: right
+          @include sm
+            text-align: center
+            font-size: 30px
+
+          &.earned
+            color: $green
+            font-weight: 500
+
+          .pennies
+            font-size: 30px
+            @include sm
+              font-size: 20px
+
+  .deliveries
+    background: $white
+    padding: 45px 60px
+    border-radius: 10px
+
+    @include sm
+      padding: 18px 26px
+
+    .tableHeader
+      padding: 25px 0
+      font-weight: 600
+      justify-content: space-between
+      @include flex
+      @include flex-flow-row-nowrap
+
+      .headerCell
+        font-weight: 600
+
+      .date
+        width: 100%
+        max-width: 204px
+
+      .time
+        width: 100%
+        max-width: 236px
+
+      .trip
+        width: 100%
+        max-width: 375px
+
+    .tableItem
+      padding: 25px 0
+      justify-content: space-between
+      color: $secondGreyFont
+      border-top: 1px solid $border
+      @include flex
+      @include flex-flow-row-nowrap
+
+      .date
+        width: 100%
+        max-width: 204px
+
+      .time
+        width: 100%
+        max-width: 236px
+
+      .trip
+        width: 100%
+        max-width: 375px
+
+      .earned
+        color: $green
+        font-weight: 600
+
+    .noDelivery
+      width: 100%
+      font-size: 26px
+      text-align: center
+
+      @include sm
+        font-size: $subTitle

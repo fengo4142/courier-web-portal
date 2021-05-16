@@ -1,0 +1,30 @@
+@import "../../../styles/variables"
+
+.phoneWrapper
+  max-width: 350px
+  width: 100%
+  @include flex
+  margin-bottom: 20px
+
+  .preInput
+    margin-right: 10px
+    width: 100%
+    max-width: 70px
+
+    .phoneTitle
+      color: $greyFont
+      font-size: 12px
+      padding-left: 21px
+      padding-bottom: 5px
+
+    .icon
+      padding-bottom: 7px
+      @include flex
+
+      .iconItem
+        padding-right: 5px
+
+  .input
+    max-width: 110px
+    border: none
+    border-bottom: 1px solid $border

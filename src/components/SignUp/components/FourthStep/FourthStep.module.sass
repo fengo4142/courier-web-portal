@@ -1,0 +1,106 @@
+@import "../../styles/variables"
+
+.backArrowIcon
+  margin: 50px 50px 30px
+  &:hover
+    cursor: pointer
+  @include sm
+    margin: 30px
+
+.signUpForm
+  width: 100%
+  align-items: center
+  margin: auto
+  padding: 0 20px
+  max-width: 350px
+  @include flex
+  @include flex-column
+
+  .title
+    font-size: 32px
+    font-weight: 500
+    padding-bottom: 6px
+    padding-top: 15px
+    text-align: center
+
+  .error
+    margin: -20px 0 15px
+
+  .inputWrapper
+    padding-top: 40px
+    width: 100%
+    justify-content: center
+    align-items: center
+    @include sm
+      padding-top: 20px
+
+    .textField
+      max-width: 350px
+      margin-bottom: 32px
+
+    .carDetailsWrapper
+      width: 100%
+      @include flex
+      @include sm
+        @include flex-flow-row
+
+      .input
+        border: none
+        border-bottom: 1px solid $border
+
+      .makeInput
+        max-width: 150px !important
+        margin-right: 20px
+        @include sm
+          width: 100%
+          margin-right: 0
+          max-width: 100% !important
+
+      .modelInput
+        max-width: 80px
+        margin-right: 20px
+        @include sm
+          width: calc(100% - 100px)
+          max-width: calc(100% - 100px) !important
+
+      .yearInput
+        max-width: 80px
+
+    .vehicleTitle
+      font-size: 18px
+      font-weight: 500
+      @include sm
+        display: none
+
+    .vehicleSubtitle
+      font-size: 14px
+      color: $secondGreyFont
+      padding-bottom: 25px
+      @include sm
+        display: none
+
+    .uploadInput
+      border-bottom: 1px solid $blue
+      border-bottom-style: dashed
+      justify-content: space-between
+      align-items: center
+      @include flex
+      @include flex-flow-row
+
+    .fileLabel
+      color: $blue
+      font-size: 15px
+      justify-content: space-between
+      @include flex
+      &:hover
+        cursor: pointer
+
+    .fileRootInput
+      display: none
+
+  .applyButton
+    margin-bottom: 20px
+    @include border-radius(26px)
+    .buttonText
+      font-size: 17px
+      font-weight: 600

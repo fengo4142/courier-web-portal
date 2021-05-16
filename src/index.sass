@@ -1,0 +1,35 @@
+@import "styles/variables"
+
+html, body
+  font-family: $font-family
+  font-weight: normal
+  font-stretch: normal
+  font-style: normal
+  line-height: normal
+  letter-spacing: normal
+  margin: 0
+
+*
+  box-sizing: border-box
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+  outline: none
+
+input[type="file"]
+  display: none
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type="number"]
+  -moz-appearance: textfield
+
+.globalLoader
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh

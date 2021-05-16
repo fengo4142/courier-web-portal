@@ -1,0 +1,136 @@
+@import "../../styles/variables"
+
+.deliveryWrapper
+  width: 100%
+  overflow: auto
+  background: $greyBg
+
+  .pendingBlock
+    padding: 20px
+    margin: 20px
+
+  .header
+    .navigation
+      justify-content: space-between
+      align-items: center
+      padding: 12px
+      max-height: 60px
+      background: $white
+      @include flex
+
+      .search
+        max-width: 200px
+        max-height: 36px
+        margin-bottom: 0
+
+        @include sm
+          max-width: 170px
+
+      .input
+        background-color: $searchBg
+        border: none
+
+      .inputRoot
+        padding: 10px
+        font-size: 13px
+
+      .title
+        font-size: 20px
+        font-weight: 500
+
+        @include sm
+          display: none
+
+      .pagination
+        color: $secondGreyFont
+        font-size: 14px !important
+
+    .tableHeader
+      padding: 12px 90px
+      justify-content: left
+      box-shadow: 0 1px 4px 0 $border
+      background-color: $greyLightBg
+      color: $lightGreyFont
+      font-size: 13px
+      @include flex
+      @include flex-flow-row-nowrap
+
+      @include sm
+        padding: 12px 42px
+
+      .date
+        width: 100%
+        max-width: 204px
+
+      .time
+        width: 100%
+        max-width: 236px
+
+      .trip
+        width: 100%
+        max-width: 375px
+
+      .earned
+        flex-grow: 1
+        text-align: right
+
+
+  .paper
+    background: $white
+    margin: 16px
+    padding: 25px 60px
+    @include border-radius(10px)
+    &.deliveriesPaper
+      height: auto
+      //min-height: calc(100% - 99px - 32px)
+
+    @include sm
+      padding: 22px 26px
+
+    .deliveries
+      // overflow: auto
+
+      .tableItem
+        padding: 25px 0
+        justify-content: left
+        color: $secondGreyFont
+        &:not(:last-child)
+          border-bottom: 1px solid $border
+        @include flex
+        @include flex-flow-row-nowrap
+
+        .date
+          width: 100%
+          max-width: 204px
+
+        .time
+          width: 100%
+          max-width: 236px
+
+        .trip
+          width: 100%
+          max-width: 375px
+
+        .earned
+          flex-grow: 1
+          color: $green
+          font-weight: 600
+
+    .noDeliveries
+      height: 100%
+      text-align: center
+      justify-content: center
+      align-items: center
+      @include flex
+      @include flex-flow-column
+
+      .title
+        padding-top: 20px
+        font-size: 37px
+        line-height: 1.08
+        color: $secondGreyFont
+
+      .subtitle
+        padding-top: 10px
+        font-size: 16px
+        color: $middleGreyFont

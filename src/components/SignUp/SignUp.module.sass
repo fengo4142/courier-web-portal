@@ -1,0 +1,26 @@
+@import "../../styles/variables"
+
+.documentLayout
+  width: 100%
+  height: 100%
+  @include flex
+
+.documentLayoutLoading
+  justify-content: center
+
+.root
+  width: 100%
+  height: 100%
+  justify-content: center
+  @include flex
+
+  .helloSign
+    height: 100%
+    width: 100%
+
+  .mainContent
+    width: 100%
+    justify-content: space-between
+    overflow: auto
+    @include flex
+    @include flex-column

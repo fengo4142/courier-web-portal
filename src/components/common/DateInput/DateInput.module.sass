@@ -1,0 +1,36 @@
+@import "../../../styles/variables"
+
+.monthLabel
+  padding-left: 25px
+  color: $greyFont
+  margin-bottom: -10px !important
+  font-size: 12px !important
+
+.dateWrapper
+  width: 100%
+  margin-bottom: 16px !important
+  align-items: flex-end
+  @include flex
+
+  .textField
+    max-width: 80px
+    &:not(:last-child)
+      margin-right: 20px
+
+  .input
+    border: none
+    border-bottom: 1px solid $border
+    &::placeholder
+      color: red
+
+  .selectLabel
+    padding-left: 25px
+    margin-bottom: -25px
+
+  .icon
+    width: 17px
+    height: 17px
+    max-width: inherit !important
+
+  .monthSelect
+    margin-right: 20px

@@ -1,0 +1,35 @@
+@import "../../../styles/variables"
+
+.pendingHeader
+  //width: 100%
+  margin: 20px 0
+  border-radius: 10px
+  //box-shadow: 0 0 1px 0 $border
+  background-color: $white
+  @include flex
+  align-items: flex-start
+
+  @include sm
+    //padding: 23px 20px
+
+  .textBlock
+    justify-content: space-around
+    @include flex
+    @include flex-flow-column
+    padding-left: 20px
+
+    .titlePending
+      font-size: 25px
+      padding-bottom: 3px
+
+      @include sm
+        font-size: $subTitle
+
+    .subtitlePending
+      font-size: $secondaryFont
+
+      @include sm
+        font-size: 14px
+
+    .email
+      color: $mainRed

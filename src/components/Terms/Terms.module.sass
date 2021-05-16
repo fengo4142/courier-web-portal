@@ -1,0 +1,102 @@
+@import "../../styles/variables"
+
+.termsWrapper
+  height: 100vh
+  width: 100%
+  overflow: auto
+  color: $secondGreyFont
+
+  .preheader
+    background-color: rgba(0, 0, 0, 0.05)
+    height: 20px
+    display: none
+    @include sm
+      display: flex
+
+  .header
+    justify-content: space-between
+    @include flex
+    padding: 20px 30px
+
+    @include sm
+      border-bottom: 1px solid $border
+      padding: 12px 20px
+
+    .logo
+      width: 180px
+      height: 42px
+
+      @include sm
+        width: 150px
+        height: 34px
+
+    .signIn
+      font-size: 16px
+
+      @include sm
+        border: none
+
+    .link
+      color: $secondary
+
+      @include sm
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 14px
+
+  .textWrapper
+    padding: 30px 320px 0
+
+    @include md
+      padding: 20px 30px
+
+    ol > li
+      counter-increment: item
+    .nested
+      ol
+        counter-reset: item
+
+      ol > li
+        counter-increment: item
+        display: block
+
+      ol > li:before
+        content: counters(item, ".") ". "
+        margin-left: -30px
+        margin-bottom: -21px
+        display: block
+
+    .title
+      font-size: 32px
+      text-align: center
+      color: $black
+
+      @include sm
+        font-size: 28px
+
+    .article
+      padding: 20px 0
+
+      .subtitle
+        color: $subtitleFont
+        font-size: 18px
+
+      .text
+        font-size: 15px
+
+  .footer
+    padding: 24px 0
+    border-top: 1px solid $border
+    justify-content: space-between
+    @include flex
+    margin: 0 30px
+
+    @include sm
+      margin: 0 20px
+      flex-direction: column
+      padding: 15px 0
+
+    .title
+      @include sm
+        text-align: center
+        padding-bottom: 10px

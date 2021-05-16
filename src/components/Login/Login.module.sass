@@ -1,0 +1,73 @@
+@import "../../styles/variables"
+
+.root
+  width: 100%
+  height: 100%
+  @include flex
+
+  @include sm
+    min-height: calc(100vh - 181px)
+
+  .error
+    margin: -20px 0 20px
+    text-align: center
+    max-width: 350px
+
+  .textField
+    max-width: 350px
+
+  .input
+    border: none
+    border-bottom: 1px solid $border
+
+  .mainContent
+    width: 100%
+    justify-content: space-between
+    @include flex
+    @include flex-flow-column
+
+    .signInForm
+      width: 100%
+      margin: auto
+      justify-content: center
+      align-items: center
+      @include flex
+      @include flex-flow-column
+
+      .title
+        font-size: 37px
+        font-weight: 500
+
+      .signInButton
+        @include border-radius(26px)
+
+      .inputWrapper
+        padding: 40px 20px 0 20px
+        width: 100%
+        justify-content: center
+        align-items: center
+        @include flex
+        @include flex-flow-column
+
+      .forgotPassword
+        padding: 40px 0
+        justify-content: space-between
+        align-items: center
+        color: $greyFont
+        @include flex
+
+        .resetPassword
+          margin-left: 10px
+          @include link($secondary)
+
+    .signInFooter
+      width: 100%
+      height: 88px
+      border-top: 1px solid $greyBorder
+      justify-content: center
+      align-items: center
+      @include flex
+
+      .signUp
+        margin-left: 10px
+        @include link($secondary)

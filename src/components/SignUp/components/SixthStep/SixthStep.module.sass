@@ -1,0 +1,59 @@
+@import "../../styles/variables"
+
+.backArrowIcon
+  margin: 50px 50px 30px
+  &:hover
+    cursor: pointer
+  @include sm
+    margin: 30px
+
+.signUpForm
+  width: 100%
+  align-items: center
+  margin: auto
+  padding: 0 20px
+  max-width: 350px
+  @include flex
+  @include flex-column
+
+  .bigIcon
+    width: 72px
+    height: 96px
+    margin-bottom: 32px
+
+  .title
+    font-size: 32px
+    font-weight: 500
+    padding-bottom: 6px
+    padding-top: 15px
+    text-align: center
+
+  .subtitle
+    font-size: 16px
+    text-align: center
+
+  .checkButton
+    margin-top: 40px
+    width: 168px
+    padding: 15px 40px
+    color: $white
+    background: $mainRed
+    text-decoration: none
+    @include border-radius(26px)
+
+  .checkText
+    margin: 40px 0 20px
+    @include underline
+    @include link($blue)
+
+.checkRFooter
+  width: 100%
+  height: 88px
+  font-size: 16px
+  padding-bottom: 32px
+  justify-content: center
+  align-items: flex-end
+  @include flex
+
+  .checkRText
+    margin-right: 10px

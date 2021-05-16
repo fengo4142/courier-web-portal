@@ -1,0 +1,142 @@
+@import "../../styles/variables"
+
+.mainContent
+  width: 100%
+  padding: 60px
+
+  @include sm
+    padding: 24px 26px
+
+  .title
+    font-size: 32px
+    font-weight: 500
+    padding-bottom: 5px
+
+    @include sm
+      display: none
+
+  .subtitle
+    font-size: 16px
+
+    @include sm
+      text-align: center
+      padding: 0 30px
+
+  .buttonContainer
+    @include sm
+      text-align: center
+    .linkButton
+      @include border-radius(26px)
+
+      .linkText
+        font-weight: 500
+        font-size: 16px
+
+  .cardTitle
+    margin-bottom: 50px
+    font-weight: 600
+
+  .cardNumber
+    font-size: 14px
+    padding-bottom: 5px
+
+  .expireDate
+    font-size: 14px
+
+  .card
+    width: 100%
+    height: 160px
+    max-width: 292px
+    border: 1px solid $cardBorder
+    padding: 25px 30px
+    @include border-radius(10px)
+    &:not(:last-child)
+      margin-right: 30px
+
+      @include sm
+        margin: 0 auto
+
+    @include xs
+      max-width: 100%
+
+  .cardBlock
+    margin: 40px 0
+    width: 100%
+    @include flex
+
+  .linkedCardBlock
+    @include md
+      flex-direction: column
+
+    .linkedCard
+      color: $white
+      background: $secondaryRed url('../../assets/icon/fill-1.svg') no-repeat
+      background-size: cover
+
+    .manageCardMobile
+      display: none
+      @include md
+        display: block
+      @include sm
+        text-align: center
+      @include xs
+        text-align: center
+
+    .balance
+      @include md
+        margin-top: 20px
+      @include sm
+        margin: 20px auto 0 auto
+
+      .money
+        font-size: 57px
+        color: $green
+        font-weight: 500
+
+        .pennies
+          font-size: 30px
+
+      .balanceTitle
+        margin-bottom: 16px
+        color: $greyFont
+        font-weight: 500
+
+  .buttonsWrapper
+    @include flex
+
+    @include sm
+      justify-content: center
+
+    .manageCardDesktop
+      @include flex
+
+      @include md
+        display: none
+
+  .button
+    padding: 0 20px
+    margin: 10px 0
+    border-radius: 0
+    &.leftBtn
+      @include md
+        border-right: 1px solid $border
+    &.withdraw
+      height: 52px
+      margin: 0 20px 0 0
+      @include border-radius(26px)
+
+    .buttonText
+      font-size: 16px
+      font-weight: 500
+
+  .notLinkedCardBlock
+    .notLinkedCard
+      background: $photoBg
+      @include sm
+        margin: 0 auto
+
+      .cardNumber
+        color: $middleGreyFont
+
+      .expireDate
+        color: $middleGreyFont

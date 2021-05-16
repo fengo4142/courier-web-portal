@@ -1,0 +1,60 @@
+@import "../../styles/variables"
+
+.root
+  .header
+    display: none
+    background-color: $menuBg
+    @include sm
+      display: block
+    .headerLine
+      height: 20px
+      background-color: rgba(255, 255, 255, 0.09)
+
+    .headerContent
+      height: 58px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 23px
+
+      .menuBtn
+        background-color: transparent
+        border: none
+
+      .pageTitle
+        font-size: $secondaryFont
+        font-weight: 600
+        color: $white
+
+      .logo
+        width: 137px
+
+      .avatarInitials
+        background-color: $avatarInitials
+        width: 38px
+        height: 38px
+        @include border-radius(10px)
+        @include flex-center
+        border: none
+        color: $white
+        font-weight: bold
+        font-size: $subTitle
+
+  .content
+    min-height: 100vh
+    @include flex
+
+    @include sm
+      min-height: calc(100vh - 78px)
+
+    .menuWrapper
+
+      @include sm
+        display: none
+
+  .menu
+    position: fixed
+    width: 100%
+    height: 100%
+    left: 0
+    top: 78px

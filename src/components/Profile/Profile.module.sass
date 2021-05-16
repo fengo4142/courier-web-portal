@@ -1,0 +1,240 @@
+@import "../../styles/variables"
+
+.mainContent
+  width: 100%
+  padding: 60px
+  overflow: auto
+  @include flex-flow-column
+  @include flex
+
+  @include sm
+    padding: 22px 26px
+
+  .pendingHeaderBlock
+    margin-top: -30px
+    margin-bottom: 20px
+
+    @include sm
+      margin-top: 0
+
+  .profile
+    @include flex
+
+    @include sm
+      flex-direction: column
+      //padding: 26px
+
+  .error
+    margin: -20px 0 15px
+
+  .fileLabel
+    font-size: 14px
+    @include link($secondary)
+
+  .fileIcon
+    display: none
+
+  .fileRootInput
+    display: none
+
+  .picture
+    text-align: center
+
+  .tShirtLabel
+    margin-top: 20px !important
+
+  .tShirtSelect
+    width: 100%
+    max-width: 292px
+    @include sm
+      max-width: 100%
+
+  .uploadPhoto
+    width: 100%
+    max-width: 160px
+    margin-right: 40px
+    align-items: center
+    @include flex
+    @include flex-flow-column
+
+    @include sm
+      margin: 0 auto
+      @include flex-column
+
+    .photo
+      height: 160px
+      width: 160px
+      margin-bottom: 12px
+      background: $photoBg
+      justify-content: center
+      align-items: center
+      @include flex
+      @include border-radius(100%)
+
+      .picture
+        width: 100%
+        border-radius: 100%
+        height: 100%
+        background-size: cover
+        background-position: center top
+        background-repeat: no-repeat
+
+  .profileSettings
+    width: 100%
+    max-width: 614px
+
+    .twoInput
+      margin-bottom: 25px
+      justify-content: space-between
+      @include flex
+      @include flex-flow-row
+
+    .dateInput
+      width: 100%
+      max-width: 292px
+      align-items: flex-end
+      @include flex
+
+      @include sm
+        max-width: 100%
+
+    .title
+      font-size: 32px
+      margin-bottom: 15px
+      font-weight: 500
+
+      @include sm
+        display: none
+
+    .textField
+      width: 100%
+      max-width: 292px
+
+      @include sm
+        max-width: 100%
+
+      &:not(:last-child)
+        margin-right: 30px
+
+        @include sm
+          margin-right: 0
+
+    .textCenter
+      text-align: center
+
+    .input
+      border: solid 1px $inputBorder
+
+    .address
+      max-width: 614px
+
+    .inputRoot
+      padding: 16px 22px
+
+    .documents
+      padding: 50px 0 0
+      width: 100%
+      max-width: 614px
+      justify-content: space-between
+      @include flex
+
+      @include sm
+        flex-direction: column
+        padding: 20px 0 10px 0
+
+      .document
+        width: 100%
+        &:not(:last-child)
+          margin-right: 30px
+
+        .documentPhoto
+          width: 100%
+          height: 100%
+          max-height: 160px
+          min-height: 160px
+          margin: 12px 0
+          background: $photoBg
+          justify-content: center
+          align-items: center
+          @include flex
+          @include border-radius(10px)
+
+          &.isPhoto
+            background-color: $white
+            border: 1px solid $border
+
+        .documentTitle
+          justify-content: space-between
+          @include flex
+
+          .subtitle
+            font-size: 16px
+            font-weight: 500
+
+          .option
+            font-size: 13px
+            color: $greyFont
+
+    .updateButtonWrapper
+      margin-top: 30px
+      @include sm
+        margin-top: 0
+        text-align: center
+      .updateButton
+        font-size: 20px
+        @include border-radius(26px)
+
+    .vehicleInfo
+      .title
+        padding-top: 35px
+        font-size: 24px
+        font-weight: 500
+
+      .carInfo
+        @include flex
+
+        .yearInput
+          max-width: 85px
+
+        @include sm
+          @include flex-flow-row
+          .carModelInput
+            max-width: 70%
+            margin-right: 20px
+
+          .yearInput
+            max-width: calc(30% - 20px)
+
+      .documents
+        padding: 15px 0 0
+
+  .pendingBlock
+    width: 100%
+    height: 100%
+    justify-content: center
+    align-items: center
+    @include flex
+    @include flex-column
+
+    .title
+      font-size: 37px
+      font-weight: 500
+      padding-bottom: 5px
+
+      @include sm
+        font-size: 22px
+        text-align: center
+
+    .bigIcon
+      width: 72px
+      height: 96px
+      margin-bottom: 32px
+
+    .subtitle
+      font-size: 16px
+      text-align: center
+
+    .okButton
+      margin-top: 40px
+      padding: 16px 40px
+      @include border-radius(26px)
